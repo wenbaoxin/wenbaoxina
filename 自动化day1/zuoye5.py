@@ -1,0 +1,17 @@
+from selenium import webdriver
+import time
+driver = webdriver.Chrome()
+driver.get(r"H:/自动化/练习的html/练习的html/上传文件和下拉列表/autotest.html")
+driver.find_element_by_xpath("//*[@id='accountID']").send_keys("wenbaoxin")
+driver.find_element_by_xpath("//*[@id='passwordID']").send_keys("123654")
+driver.find_element_by_xpath("//*[@id='areaID']").send_keys("天津市")
+driver.find_element_by_xpath("//*[@id='accountID']").send_keys("wenbaoxin")
+driver.find_element_by_xpath("//*[@id='sexID1']").click()
+driver.find_element_by_xpath("//*[@id='sexID1']").click()
+driver.find_element_by_xpath("//*[@value='spring']").click()
+driver.find_element_by_xpath("//*[@value='Auterm']").click()
+driver.find_element_by_xpath("//input[@name='file' and @type='file']").send_keys(r"H:\猪小屁\1.jpg")
+driver.find_element_by_xpath("//*[@id='buttonID']").click()
+driver.maximize_window()
+time.sleep(3)
+driver.quit()
